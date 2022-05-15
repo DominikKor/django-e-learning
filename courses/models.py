@@ -40,6 +40,14 @@ class Module(models.Model):
     def __str__(self):
         return f"{self.order}. {self.title}"
 
+    @property
+    def uid(self):
+        return self.id + 1
+
+    @property
+    def uorder(self):
+        return self.order + 1
+
     class Meta:
         ordering = ["order"]
 
