@@ -12,5 +12,7 @@ urlpatterns = [
     path("module/<int:module_id>/content/<model_name>/<id>/", views.ContentCreateUpdateView.as_view(),
          name="module_content_update"),
     path("module/<int:module_id>", views.ModuleContentListView.as_view(), name="module_content_list"),
-    path("content/<int:id>/delete/", views.ContentDeleteView.as_view(), name="module_content_delete")
+    path("content/<int:id>/delete/", views.ContentDeleteView.as_view(), name="module_content_delete"),
+    path("module/order/", views.ModuleOrderView.as_view(), name="module_order"),
+    path("content/order/", views.ContentOrderView.as_view(), name="content_order"),
 ]
